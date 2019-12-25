@@ -1,3 +1,9 @@
 {
-  "port": 8080
+  "port": 8080,
+  "db": {
+    "user": "postgres",
+    "password": "postgres",
+    "database": "cashing-app",
+    "host": "db"
+  }
 }
