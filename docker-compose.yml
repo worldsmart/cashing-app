@@ -10,16 +10,26 @@ services:
       - postgres:/var/lib/postgresql/data
     networks:
       - cashing-app
+    restart: on-failure
     environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: cashing-app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5432:5432"
   app:
-    image: cashing-app
+    build: .
     networks:
       - cashing-app
-    command: ["/wait-for-it.sh", "db:5432", "--", "npm", "start"]
+    environment:
+      DEPLOYED_TO: ${DEPLOY_TO}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_DATABASE: ${POSTGRES_DB}
+      DB_HOST: db
+    depends_on:
+      - db
+    restart: on-failure
+    command: ["/wait-for-it.sh", "db:5432", "--", "node", "app.js"]
     ports:
-      - "8080:8080"
+      - ${DEPLOY_TO}:8080

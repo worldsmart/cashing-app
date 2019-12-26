@@ -28,10 +28,9 @@ var User = sequelize.define('user', {
     freezeTableName: true // Model tableName will be the same as the model name
 });
 
-User.sync({force: true}).then(function () {
+
     // Table created
     User.create({
         firstName: 'John',
         lastName: 'Hancock'
     }).then(user=>{console.log(user)}).catch(err=>{console.log(err)})
-});
