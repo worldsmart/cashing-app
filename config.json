@@ -4,5 +4,6 @@
     "password": "postgres",
     "database": "cashing-app",
     "host": "localhost"
-  }
+  },
+  "secret": "gbkic37c3wih"
 }
