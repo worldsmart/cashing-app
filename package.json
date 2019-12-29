@@ -5,8 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "docker": "docker-compose up --quiet-pull --build"
+    "start": "node ./src/seeds/db-seeds.js && node app.js",
+    "docker": "docker-compose up --quiet-pull --build",
+    "db-reset": "node ./src/seeds/db-to-defaults.js",
+    "dev": "node ./src/seeds/db-seeds.js && nodemon app.js"
   },
   "repository": {
     "type": "git",

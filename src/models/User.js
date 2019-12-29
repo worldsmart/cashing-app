@@ -29,12 +29,4 @@ let User = sequelize.define('user', {
     }
 });
 
-/*User.sync().then(_=>{
-    User.create({name: 'Jon Miller', phone: '0994960855', username: '45a62', password: '12345', role: 'cashier'}).then(user=>{
-        console.log(user);
-    }).catch(err=>{
-        console.log(err);
-    });
-});*/
-
 module.exports = User;

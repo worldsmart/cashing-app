@@ -30,6 +30,6 @@ services:
     depends_on:
       - db
     restart: on-failure
-    command: ["/wait-for-it.sh", "db:5432", "--", "node", "app.js"]
+    command: ["/wait-for-it.sh", "db:5432", "--", "npm", "start"]
     ports:
       - ${DEPLOY_TO}:8080

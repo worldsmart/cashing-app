@@ -8,16 +8,21 @@ let sequelize = new Sequelize(process.env.DB_DATABASE || db.database, process.en
         max: 5,
         min: 0,
         idle: 10000
-    }
+    },
+    retry: {
+        max: 8
+    },
+    logging: false
 });
 
 sequelize
     .authenticate()
     .then(() => {
-        console.log('Successfully connected to database.')
+        console.log('Successfully connected to database.');
     })
     .catch(err => {
-        throw 'Unable connect to database.'
+        console.error('Unable connect to database.');
+        process.exit(1);
     });
 
 module.exports = sequelize;
