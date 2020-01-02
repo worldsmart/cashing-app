@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/seeds/db-seeds.js && node app.js",
     "docker": "docker-compose up --quiet-pull --build",
-    "db-reset": "node ./src/seeds/db-to-defaults.js",
-    "dev": "node ./src/seeds/db-seeds.js && nodemon app.js"
+    "dev": "node ./src/seeds/db-seeds.js && nodemon app.js",
+    "db-reset": "node ./src/seeds/db-to-defaults.js"
   },
   "repository": {
     "type": "git",
