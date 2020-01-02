@@ -1,3 +1,5 @@
 const reset = require('./db-seeds');
 
-reset.usersSet();
+reset.usersSet().then(()=>{
+    reset.productsSet();
+});
