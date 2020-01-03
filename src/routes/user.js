@@ -74,7 +74,6 @@ router.put('/', (req, res, next)=>{
             text: 'User only contains [add, remove] operations'
         });
     }
-
 });
 
 router.get('/list', (req, res, next)=>{
