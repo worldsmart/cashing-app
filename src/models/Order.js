@@ -2,6 +2,13 @@ const Sequelize = require('sequelize');
 const sequelize = require('../db');
 const Product = require('./Product');
 
+OrderStates = Object.freeze({
+    NEW: 'created',
+    RECEIVED: 'received',
+    WAITING_FOR_PAYMENT: 'waiting for payment',
+    CONFIRMED: 'confirmed'
+});
+
 let Order = sequelize.define('order', {
     product_id:{
         type: Sequelize.INTEGER,
@@ -10,7 +17,7 @@ let Order = sequelize.define('order', {
     },
     status:{
         type: Sequelize.STRING,
-        defaultValue: "created",
+        defaultValue: OrderStates.NEW,
         allowNull: false
     },
     invoice:{

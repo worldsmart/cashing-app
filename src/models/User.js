@@ -1,6 +1,12 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../db');
 
+UserRoles = Object.freeze({
+    ACCOUNTANT: 'accountant',
+    CASHIER: 'cashier',
+    BEARER: 'bearer'
+});
+
 let User = sequelize.define('user', {
     name: {
         type: Sequelize.STRING,

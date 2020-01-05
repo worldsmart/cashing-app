@@ -3,7 +3,7 @@ const Product = require('../models/Product');
 
 router.put('/', (req, res, next)=>{
     const { user } = res.locals;
-    if(user.role !== 'accountant'){
+    if(user.role !== UserRoles.ACCOUNTANT){
         next({
             code: 403,
             text: 'Not enough rights for this operation'

@@ -4,7 +4,7 @@ const { token } = require('../jwt');
 
 router.put('/', (req, res, next)=>{
     const { user } = res.locals;
-    if(user.role !== 'accountant'){
+    if(user.role !== UserRoles.ACCOUNTANT){
         next({
             code: 403,
             text: 'Not enough rights for this operation'
@@ -78,7 +78,7 @@ router.put('/', (req, res, next)=>{
 
 router.get('/list', (req, res, next)=>{
     const { user } = res.locals;
-    if(user.role !== 'accountant'){
+    if(user.role !== UserRoles.ACCOUNTANT){
         next({
             code: 403,
             text: 'Not enough rights for this operation'
