@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser  = require('body-parser');
-const User = require('./src/models/User');
+const { User } = require('./src/db');
 const { decode } = require('./src/jwt');
 
 //express usage

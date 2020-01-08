@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../models/User');
+const { User } = require('../db');
 const { token } = require('../jwt');
 
 router.put('/', (req, res, next)=>{

@@ -1,6 +1,4 @@
-const User = require('../models/User');
-const Product = require('../models/Product');
-const Order = require('../models/Order');
+const { Product, User, Order } = require('../db');
 
 module.exports.usersSet = ()=>{
     return new Promise(resolve => {

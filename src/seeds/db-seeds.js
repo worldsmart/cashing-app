@@ -1,8 +1,6 @@
 console.log('Running seeds');
 const { usersSet, productsSet, ordersSet } = require('./index');
-const User = require('../models/User');
-const Product = require('../models/Product');
-const Order = require('../models/Order');
+const { Product, User, Order } = require('../db');
 
 User.sync().then(()=>{
     User.findOne().then((user)=>{

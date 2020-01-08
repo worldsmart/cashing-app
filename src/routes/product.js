@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Product = require('../models/Product');
+const { Product } = require('../db');
 
 router.put('/', (req, res, next)=>{
     const { user } = res.locals;

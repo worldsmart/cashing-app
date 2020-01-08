@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha || true",
     "start": "node ./src/seeds/db-seeds.js && node app.js",
     "docker": "docker-compose up --quiet-pull --build",
     "dev": "node ./src/seeds/db-seeds.js && nodemon app.js",
@@ -27,5 +27,13 @@
     "pg": "^7.15.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "faker": "^4.1.0",
+    "mocha": "^7.0.0",
+    "nodemon": "^2.0.2",
+    "sequelize-mock": "^0.10.2",
+    "sinon": "^8.0.4"
   }
 }

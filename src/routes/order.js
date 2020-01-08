@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const Order = require('../models/Order');
-const Product = require('../models/Product');
+const { Product, Order } = require('../db');
 const { Op } = require('sequelize');
 
 router.put('/create', (req, res, next)=>{
