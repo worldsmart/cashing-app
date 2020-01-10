@@ -56,7 +56,4 @@ app.use((err, req, res, next)=>{
     res.status(err.code).send(err.text);
 });
 
-//server enable
-app.listen(8080, ()=>{
-    console.log('App started on port:', process.env.DEPLOYED_TO ? process.env.DEPLOYED_TO : 8080);
-});
+module.exports = app;

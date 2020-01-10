@@ -35,7 +35,7 @@ describe('DB models testing:', function() {
             expect(users[0].dataValues).to.have.all.keys('name', 'phone', 'username', 'password', 'role', 'id', 'createdAt', 'updatedAt');
         });
 
-        it('should get get user by id', async function() {
+        it('should get user by id', async function() {
             let user = await User.findOne({
                 where:{
                     id: 1
@@ -88,7 +88,7 @@ describe('DB models testing:', function() {
             expect(products[0].dataValues).to.have.all.keys('name', 'price', 'id', 'createdAt', 'updatedAt');
         });
 
-        it('should get get product by id', async function() {
+        it('should get product by id', async function() {
             let product = await Product.findOne({
                 where:{
                     id: 1
@@ -141,7 +141,7 @@ describe('DB models testing:', function() {
             expect(orders[0].dataValues).to.have.all.keys('product_id', 'customer', 'status', 'invoice', 'id', 'createdAt', 'updatedAt');
         });
 
-        it('should get get order by id', async function() {
+        it('should get order by id', async function() {
             let order = await Order.findOne({
                 where:{
                     id: 1

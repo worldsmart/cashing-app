@@ -58,7 +58,6 @@ router.put('/', (req, res, next)=>{
             token(user).then((jwt)=>{
                 res.json({
                     msg:'User successfully created',
-                    user: user,
                     token: jwt
                 });
             }).catch((err)=>{

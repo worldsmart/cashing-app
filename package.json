@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha || true",
-    "start": "node ./src/seeds/db-seeds.js && node app.js",
+    "test": "mocha --recursive || true",
+    "start": "node ./src/seeds/db-seeds.js && node server.js",
     "docker": "docker-compose up --quiet-pull --build",
-    "dev": "node ./src/seeds/db-seeds.js && nodemon app.js",
+    "dev": "node ./src/seeds/db-seeds.js && nodemon server.js",
     "db-reset": "node ./src/seeds/db-to-defaults.js"
   },
   "repository": {
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "faker": "^4.1.0",
     "mocha": "^7.0.0",
     "nodemon": "^2.0.2",
