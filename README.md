@@ -10,10 +10,10 @@
     
  
  Точки входа приложения:
-   PUT /user - для добавления или удаления пользователей
-    - Input
-      - Headers
-        - Authorization
-      - Body
-    - Output
+ PUT /user - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization
+     - Body
+   - Output
    
