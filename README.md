@@ -12,6 +12,8 @@
  
  Точки входа приложения:
  
+ 
+ 
  PUT /user - для добавления или удаления пользователей
   - Input
      - Headers
@@ -19,3 +21,67 @@
      - Body
    - Output
    
+ PUT /user/autorization - для добавления или удаления пользователей
+  - Input
+     - Body
+   - Output
+  
+  PUT /user/list - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+   
+   
+   
+  PUT /product - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+   
+  PUT /product/list - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+   
+   
+   
+   PUT /order/create - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+   
+  PUT /order/receipt - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+  
+  PUT /order/invoice - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+  
+  PUT /order/confirm - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
+  
+  PUT /order/list - для добавления или удаления пользователей
+  - Input
+     - Headers
+       - Authorization: string - authorization token
+     - Body
+   - Output
