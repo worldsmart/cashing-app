@@ -20,12 +20,12 @@
        - Authorization: string - authorization token
      - Body
         - operation: ['add', 'remove'] - указывает выполняемую операцию
-        - remove: id: int - id удаляемого пользователя
-        - add: name: string - имя владельца аккаута
-        - add: phone: string - телефон владельца аккаунта
-        - add: username: string - будущий юзернейм для входа
-        - add: password: string - пароль для входа
-        - add: role: string - роль пользователя
+        - remove - id: int - id удаляемого пользователя
+        - add - name: string - имя владельца аккаута
+        - add - phone: string - телефон владельца аккаунта
+        - add - username: string - будущий юзернейм для входа
+        - add - password: string - пароль для входа
+        - add - role: string - роль пользователя
    - Output
       - Success
         - msg: string - сообщение о успехе операции
@@ -64,9 +64,9 @@
        - Authorization: string - authorization token
      - Body
         - operation: ['add', 'remove'] - указывает выполняемую операцию
-        - add: name: string - имя добавляемого продукта
-        - add: price: double - цена добавляемого товара
-        - remove: id: int - id удаляемого товара
+        - add - name: string - имя добавляемого продукта
+        - add - price: double - цена добавляемого товара
+        - remove - id: int - id удаляемого товара
    - Output
       - Success
         - msg: string - сообщение о успехе операции
