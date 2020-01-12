@@ -15,7 +15,7 @@
  PUT /user - для добавления или удаления пользователей
   - Input
      - Headers
-       - Authorization
+       - Authorization(string): authorization token
      - Body
    - Output
    
