@@ -3,13 +3,10 @@ const bodyParser  = require('body-parser');
 const { User } = require('./src/db');
 const { decode } = require('./src/jwt');
 
-//express usage
 const app = express();
 
-//body parser usage
 app.use(bodyParser.json());
 
-//authorization middleware
 app.use((req, res, next)=>{
     if(req.url === '/user/authorization'){
         next();
@@ -39,11 +36,9 @@ app.use((req, res, next)=>{
     }
 });
 
-//router including
 const router = require('./src/router');
 app.all('*', router);
 
-//error handler for undefined references
 app.all('*', (req, res, next)=>{
     next({
         code: 404,
@@ -51,7 +46,6 @@ app.all('*', (req, res, next)=>{
     });
 });
 
-//error  handler middleware
 app.use((err, req, res, next)=>{
     res.status(err.code).send(err.text);
 });
